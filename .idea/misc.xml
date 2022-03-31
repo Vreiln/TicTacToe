@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/background.xml" value="0.21614583333333334" />
-        <entry key="..\:/Workspace-C/Android/app/src/main/res/layout/activity_add_players.xml" value="0.2" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.174" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/shape_round_ends.xml" value="0.1595" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/layout/activity_add_players.xml" value="0.22" />
       </map>
     </option>
   </component>
