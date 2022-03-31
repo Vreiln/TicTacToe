@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -19,21 +18,18 @@ public class AddPlayers extends AppCompatActivity {
                         playerTwo = findViewById(R.id.player2Name),
                         startBtn = findViewById(R.id.startBtn);
 
-        startBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final String
-                        playerOneName = playerOne.getText()+"",
-                        playerTwoName = playerTwo.getText()+"";
-                if(playerOneName.isEmpty()||playerTwoName.isEmpty()){
-                    Toast.makeText(AddPlayers.this, "Please enter your names", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    Intent intent = new Intent(AddPlayers.this,MainActivity.class);
-                    intent.putExtra("playerOne",playerOneName);
-                    intent.putExtra("playerTwo",playerTwoName);
-                    startActivity(intent);
-                }
+        startBtn.setOnClickListener(v -> {
+            final String
+                    playerOneName = playerOne.getText()+"",
+                    playerTwoName = playerTwo.getText()+"";
+            if(playerOneName.isEmpty()||playerTwoName.isEmpty()){
+                Toast.makeText(AddPlayers.this, "Please enter your names", Toast.LENGTH_SHORT).show();
+            }
+            else{
+                Intent intent = new Intent(AddPlayers.this,MainActivity.class);
+                intent.putExtra("playerOne",playerOneName);
+                intent.putExtra("playerTwo",playerTwoName);
+                startActivity(intent);
             }
         });
     }
