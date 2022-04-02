@@ -91,5 +91,5 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/shape_round_ends"
         android:text="@string/addPlayer_btn"
-        android:textColor="#212121" />
+        android:textColor="@color/white" />
 </LinearLayout>
