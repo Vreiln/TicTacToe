@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">TicTacToe</string>
     <string name="addPlayer_request">Enter Player Name</string>
-    <string name="addPlayer_hint1">Enter Player 1 Name</string>
-    <string name="addPlayer_hint2">Enter Player 2 Name</string>
+    <string name="addPlayer_hint1">Player 1 Name</string>
+    <string name="addPlayer_hint2">Player 2 Name</string>
     <string name="addPlayer_btn">Start Game</string>
+    <string name="addPlayer_imgRabbit">\?</string>
+    <string name="addPlayer_imgFrog">\?</string>
 
 </resources>

@@ -1,6 +1,7 @@
 package com.mangostynn.ticktactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,8 +16,8 @@ public class AddPlayers extends AppCompatActivity {
         setContentView(R.layout.activity_add_players);
 
         final EditText  playerOne = findViewById(R.id.player1Name),
-                        playerTwo = findViewById(R.id.player2Name),
-                        startBtn = findViewById(R.id.startBtn);
+                        playerTwo = findViewById(R.id.player2Name);
+        final AppCompatButton startBtn = findViewById(R.id.startBtn);
 
         startBtn.setOnClickListener(v -> {
             final String
