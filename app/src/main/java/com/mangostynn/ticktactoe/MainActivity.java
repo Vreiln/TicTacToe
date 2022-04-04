@@ -2,6 +2,8 @@ package com.mangostynn.ticktactoe;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
@@ -11,6 +13,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(  WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
         playerOneName = findViewById(R.id.playerOneName);
@@ -97,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageResource(R.drawable.cross);
 
         if(checkPlayerWin()){
-            playerOneWin=true;
             WinDialog winDialog = new WinDialog(
                     MainActivity.this,
                     playerOneName.getText()+" has won the match!",
@@ -119,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
     private void playerTwoAction(ImageView imageView){
         imageView.setImageResource(R.drawable.circle);
         if(checkPlayerWin()){
-            playerTwoWin=true;
             WinDialog winDialog = new WinDialog(
                     MainActivity.this,
                     playerTwoName.getText()+" has won the match!",
@@ -182,8 +186,6 @@ public class MainActivity extends AppCompatActivity {
             boardTile7.setImageResource(R.drawable.tile_transparent);
             boardTile8.setImageResource(R.drawable.tile_transparent);
             boardTile9.setImageResource(R.drawable.tile_transparent);
-        playerOneWin=false;
-        playerTwoWin=false;
     }
 
     private final List<int[]> combinationsList = new ArrayList<>();
@@ -199,5 +201,4 @@ public class MainActivity extends AppCompatActivity {
                         boardTile7,
                         boardTile8,
                         boardTile9;
-    private boolean playerOneWin, playerTwoWin;
 }
