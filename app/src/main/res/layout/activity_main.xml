@@ -33,24 +33,28 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_marginEnd="25dp">
+
                 <TextView
                     android:id="@+id/playerTwoName"
-                    android:layout_marginTop="35dp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/austine_regular"
                     android:gravity="center"
-                    android:textStyle="bold"
+                    android:textColor="#004D40"
                     android:textSize="30sp"
-                    android:textColor="#004D40"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/playerTwoTurn"
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/austine_regular"
                     android:gravity="center"
-                    android:textStyle="bold"
+                    android:textColor="#004D40"
                     android:textSize="25sp"
-                    android:textColor="#004D40"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>
@@ -230,24 +234,28 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_marginEnd="25dp">
+
                 <TextView
                     android:id="@+id/playerOneName"
-                    android:layout_marginTop="35dp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/austine_regular"
                     android:gravity="center"
-                    android:textStyle="bold"
+                    android:textColor="#004D40"
                     android:textSize="30sp"
-                    android:textColor="#004D40"/>
+                    android:textStyle="bold" />
+
                 <TextView
                     android:id="@+id/playerOneTurn"
-                    android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/austine_regular"
                     android:gravity="center"
-                    android:textStyle="bold"
+                    android:textColor="#004D40"
                     android:textSize="25sp"
-                    android:textColor="#004D40"/>
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

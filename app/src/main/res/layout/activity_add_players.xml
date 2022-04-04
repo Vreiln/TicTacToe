@@ -9,19 +9,20 @@
     tools:context=".AddPlayers">
 
     <TextView
-        android:maxLines="1"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:paddingTop="15dp"
         android:layout_marginStart="20dp"
-        android:gravity="center"
         android:layout_marginEnd="20dp"
-        android:textSize="30sp"
+        android:background="@drawable/ui_title"
+        android:fontFamily="@font/austine_regular"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingTop="15dp"
         android:text="@string/app_name"
         android:textAlignment="center"
-        android:textStyle="bold"
         android:textColor="#004D40"
-        android:background="@drawable/ui_title"/>
+        android:textSize="30sp"
+        android:textStyle="bold" />
     <LinearLayout
         android:gravity="center_vertical"
         android:layout_width="match_parent"
@@ -40,23 +41,25 @@
             android:contentDescription="@string/addPlayer_imgFrog"
             android:src="@drawable/frog"
             tools:ignore="ImageContrastCheck" />
+
         <EditText
             android:id="@+id/player1Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/austine_regular"
             android:hint="@string/addPlayer_hint1"
+            android:importantForAutofill="no"
             android:inputType="text"
-            android:paddingTop="20dp"
-            android:minHeight="48dp"
-            android:textAlignment="center"
             android:maxLength="14"
-            android:textStyle="bold"
-            android:textSize="20sp"
+            android:minHeight="48dp"
+            android:paddingTop="20dp"
+            android:textAlignment="center"
             android:textColor="#004D40"
             android:textColorHint="#004D40"
-            android:importantForAutofill="no" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:gravity="center_vertical"
@@ -81,18 +84,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="20dp"
+            android:fontFamily="@font/austine_regular"
             android:hint="@string/addPlayer_hint2"
+            android:importantForAutofill="no"
             android:inputType="text"
+            android:maxLength="14"
             android:maxLines="1"
             android:minHeight="48dp"
-            android:textAlignment="center"
-            android:maxLength="14"
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:paddingTop="20dp"
+            android:textAlignment="center"
             android:textColor="#004D40"
             android:textColorHint="#004D40"
-            android:importantForAutofill="no"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -103,9 +107,10 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/button"
+        android:fontFamily="@font/austine_regular"
         android:paddingTop="10dp"
         android:text="@string/addPlayer_btn"
-        android:textStyle="bold"
+        android:textColor="#004D40"
         android:textSize="20sp"
-        android:textColor="#004D40" />
+        android:textStyle="bold" />
 </LinearLayout>
