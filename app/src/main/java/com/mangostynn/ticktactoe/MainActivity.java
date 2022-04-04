@@ -97,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         imageView.setImageResource(R.drawable.cross);
 
         if(checkPlayerWin()){
-            playerOneWin=true;
             WinDialog winDialog = new WinDialog(
                     MainActivity.this,
                     playerOneName.getText()+" has won the match!",
@@ -119,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
     private void playerTwoAction(ImageView imageView){
         imageView.setImageResource(R.drawable.circle);
         if(checkPlayerWin()){
-            playerTwoWin=true;
             WinDialog winDialog = new WinDialog(
                     MainActivity.this,
                     playerTwoName.getText()+" has won the match!",
@@ -182,8 +180,6 @@ public class MainActivity extends AppCompatActivity {
             boardTile7.setImageResource(R.drawable.tile_transparent);
             boardTile8.setImageResource(R.drawable.tile_transparent);
             boardTile9.setImageResource(R.drawable.tile_transparent);
-        playerOneWin=false;
-        playerTwoWin=false;
     }
 
     private final List<int[]> combinationsList = new ArrayList<>();
@@ -199,5 +195,4 @@ public class MainActivity extends AppCompatActivity {
                         boardTile7,
                         boardTile8,
                         boardTile9;
-    private boolean playerOneWin, playerTwoWin;
 }
