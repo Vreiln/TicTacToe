@@ -173,7 +173,6 @@ public class MainActivity extends AppCompatActivity {
         boxPositions = new int[]{0,0,0,0,0,0,0,0,0};
         playerTurn=1;
         totalSelectedBoxes=1;
-        if(playerOneWin){
             boardTile1.setImageResource(R.drawable.tile_transparent);
             boardTile2.setImageResource(R.drawable.tile_transparent);
             boardTile3.setImageResource(R.drawable.tile_transparent);
@@ -183,18 +182,6 @@ public class MainActivity extends AppCompatActivity {
             boardTile7.setImageResource(R.drawable.tile_transparent);
             boardTile8.setImageResource(R.drawable.tile_transparent);
             boardTile9.setImageResource(R.drawable.tile_transparent);
-        }
-        else if(playerTwoWin){
-            boardTile1.setImageResource(R.drawable.tile_transparent);
-            boardTile2.setImageResource(R.drawable.tile_transparent);
-            boardTile3.setImageResource(R.drawable.tile_transparent);
-            boardTile4.setImageResource(R.drawable.tile_transparent);
-            boardTile5.setImageResource(R.drawable.tile_transparent);
-            boardTile6.setImageResource(R.drawable.tile_transparent);
-            boardTile7.setImageResource(R.drawable.tile_transparent);
-            boardTile8.setImageResource(R.drawable.tile_transparent);
-            boardTile9.setImageResource(R.drawable.tile_transparent);
-        }
         playerOneWin=false;
         playerTwoWin=false;
     }
