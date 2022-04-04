@@ -2,7 +2,6 @@ package com.mangostynn.ticktactoe;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -49,15 +48,42 @@ public class MainActivity extends AppCompatActivity {
 
         playerOneLayout.setOnClickListener(e->playerOneLayout());
         playerTwoLayout.setOnClickListener(e->playerTwoLayout());
-        boardTile1.setOnClickListener(e->isBoxSelected(0));
-        boardTile2.setOnClickListener(e->isBoxSelected(1));
-        boardTile3.setOnClickListener(e->isBoxSelected(2));
-        boardTile4.setOnClickListener(e->isBoxSelected(3));
-        boardTile5.setOnClickListener(e->isBoxSelected(4));
-        boardTile6.setOnClickListener(e->isBoxSelected(5));
-        boardTile7.setOnClickListener(e->isBoxSelected(6));
-        boardTile8.setOnClickListener(e->isBoxSelected(7));
-        boardTile9.setOnClickListener(e->isBoxSelected(8));
+        boardTile1.setOnClickListener(e->{
+            if(isBoxSelected(0))
+                performAction((ImageView)e,0);
+        });
+        boardTile2.setOnClickListener(e->{
+            if(isBoxSelected(1))
+                performAction((ImageView)e,1);
+        });
+        boardTile3.setOnClickListener(e->{
+            if(isBoxSelected(2))
+                performAction((ImageView)e,2);
+        });
+        boardTile4.setOnClickListener(e->{
+            if(isBoxSelected(3))
+                performAction((ImageView)e,3);
+        });
+        boardTile5.setOnClickListener(e->{
+            if(isBoxSelected(4))
+                performAction((ImageView)e,4);
+        });
+        boardTile6.setOnClickListener(e->{
+            if(isBoxSelected(5))
+                performAction((ImageView)e,5);
+        });
+        boardTile7.setOnClickListener(e->{
+            if(isBoxSelected(6))
+                performAction((ImageView)e,6);
+        });
+        boardTile8.setOnClickListener(e->{
+            if(isBoxSelected(7))
+                performAction((ImageView)e,7);
+        });
+        boardTile9.setOnClickListener(e->{
+            if(isBoxSelected(8))
+                performAction((ImageView)e,8);
+        });
     }
 
     private void playerOneLayout(){
