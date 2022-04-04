@@ -6,6 +6,147 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="400"
+            android:layout_height="400"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/board_no_tiles"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/tile1"
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tile"
+                    android:padding="20dp" />
+
+                <ImageView
+                    android:id="@+id/tile2"
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tile"
+                    android:padding="20dp" />
+
+                <ImageView
+                    android:id="@+id/tile3"
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tile"
+                    android:padding="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/tile4"
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tile"
+                    android:padding="20dp" />
+
+                <ImageView
+                    android:id="@+id/tile5"
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tile"
+                    android:padding="20dp" />
+
+                <ImageView
+                    android:id="@+id/tile6"
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tile"
+                    android:padding="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <ImageView
+                    android:id="@+id/tile7"
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tile"
+                    android:padding="20dp" />
+
+                <ImageView
+                    android:id="@+id/tile8"
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tile"
+                    android:padding="20dp" />
+
+                <ImageView
+                    android:id="@+id/tile9"
+                    android:layout_width="0dp"
+                    android:layout_height="115dp"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tile"
+                    android:padding="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/topBar"
         android:layout_width="match_parent"
@@ -53,130 +194,7 @@
 
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="405dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/board_no_tiles"
-        android:layout_above="@id/bottomBar"
-        android:layout_below="@id/topBar">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="3"
-            android:layout_marginEnd="25dp">
-            <ImageView
-                android:id="@+id/tile1"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="5dp"
-                android:layout_width="0dp"
-                android:layout_height="115dp"
-                android:layout_weight="1"
-                android:padding="20dp"
-                android:background="@drawable/tile"/>
-            <ImageView
-                android:id="@+id/tile2"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="5dp"
-                android:layout_width="0dp"
-                android:layout_height="115dp"
-                android:layout_weight="1"
-                android:padding="20dp"
-                android:background="@drawable/tile"/>
-            <ImageView
-                android:id="@+id/tile3"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="5dp"
-                android:layout_width="0dp"
-                android:layout_height="115dp"
-                android:layout_weight="1"
-                android:padding="20dp"
-                android:background="@drawable/tile"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="3"
-            android:layout_marginEnd="25dp">
-            <ImageView
-                android:id="@+id/tile4"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="5dp"
-                android:layout_width="0dp"
-                android:layout_height="115dp"
-                android:layout_weight="1"
-                android:padding="20dp"
-                android:background="@drawable/tile"/>
-            <ImageView
-                android:id="@+id/tile5"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="5dp"
-                android:layout_width="0dp"
-                android:layout_height="115dp"
-                android:layout_weight="1"
-                android:padding="20dp"
-                android:background="@drawable/tile"/>
-            <ImageView
-                android:id="@+id/tile6"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="5dp"
-                android:layout_width="0dp"
-                android:layout_height="115dp"
-                android:layout_weight="1"
-                android:padding="20dp"
-                android:background="@drawable/tile"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="3"
-            android:layout_marginEnd="25dp">
-            <ImageView
-                android:id="@+id/tile7"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginEnd="5dp"
-                android:layout_width="0dp"
-                android:layout_height="115dp"
-                android:layout_weight="1"
-                android:padding="20dp"
-                android:background="@drawable/tile"/>
-            <ImageView
-                android:id="@+id/tile8"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="5dp"
-                android:layout_width="0dp"
-                android:layout_height="115dp"
-                android:layout_weight="1"
-                android:padding="20dp"
-                android:background="@drawable/tile"/>
-            <ImageView
-                android:id="@+id/tile9"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="3dp"
-                android:layout_marginEnd="5dp"
-                android:layout_width="0dp"
-                android:layout_height="115dp"
-                android:layout_weight="1"
-                android:padding="20dp"
-                android:background="@drawable/tile"/>
-        </LinearLayout>
-    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
