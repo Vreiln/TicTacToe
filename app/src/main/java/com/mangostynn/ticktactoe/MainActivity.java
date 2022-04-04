@@ -44,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
         playerOneName.setText(getPlayerOneName);
         playerTwoName.setText(getPlayerTwoName);
 
+        playerOneTurn.setText(R.string.turnTrue);
+        playerTwoTurn.setText(R.string.turnFalse);
+
         boardTile1.setOnClickListener(e->{
             if(isBoxSelected(0))
                 performAction((ImageView)e,0);
