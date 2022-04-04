@@ -28,6 +28,7 @@
             android:layout_margin="20dp"
             android:background="@drawable/round_back_purple"
             android:textColor="@color/white"
-            android:text="Start Again"/>
+            android:text="Start Again"
+            android:gravity="center"/>
     </LinearLayout>
 </RelativeLayout>

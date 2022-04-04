@@ -3,8 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android Studio Project/TicTacToe-main/app/src/main/res/layout/activity_add_players.xml" value="0.4" />
-        <entry key="..\:/Android Studio Project/TicTacToe-main/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/background.xml" value="0.21614583333333334" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.174" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/round_back_blue_border.xml" value="0.191" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/round_back_dark_blue.xml" value="0.191" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/round_back_purple.xml" value="0.191" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/shape_round_ends.xml" value="0.1595" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/layout/activity_add_players.xml" value="0.5" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Workspace-C/Android/app/src/main/res/layout/win_dialog_layout.xml" value="0.67" />
       </map>
     </option>
   </component>
