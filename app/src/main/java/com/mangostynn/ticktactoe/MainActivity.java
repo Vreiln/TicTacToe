@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
         playerOneName.setText(getPlayerOneName);
         playerTwoName.setText(getPlayerTwoName);
 
-        playerOneLayout.setOnClickListener(e->playerOneLayout());
-        playerTwoLayout.setOnClickListener(e->playerTwoLayout());
         boardTile1.setOnClickListener(e->{
             if(isBoxSelected(0))
                 performAction((ImageView)e,0);
@@ -86,13 +84,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void playerOneLayout(){
-
-    }
-    private void playerTwoLayout(){
-
-    }
-
     private void performAction(ImageView imageView, int selectedBoxPosition){
         boxPositions[selectedBoxPosition] = playerTurn;
 
@@ -101,15 +92,15 @@ public class MainActivity extends AppCompatActivity {
         else
             playerTwoAction(imageView);
     }
-    private void playerOneAction(@NonNull ImageView imageView){
+    private void playerOneAction(ImageView imageView){
         imageView.setImageResource(R.drawable.cross);
 
         if(checkPlayerWin()){
+            playerOneWin=true;
             WinDialog winDialog = new WinDialog(
                     MainActivity.this,
                     playerOneName.getText()+" has won the match!",
                     MainActivity.this);
-            winDialog.setCancelable(false);
             winDialog.show();
         }
         else if(totalSelectedBoxes == 9){
@@ -117,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
                     MainActivity.this,
                     "It is a Draw!",
                     MainActivity.this);
-            winDialog.setCancelable(false);
             winDialog.show();
         }
         else{
@@ -125,14 +115,14 @@ public class MainActivity extends AppCompatActivity {
             totalSelectedBoxes++;
         }
     }
-    private void playerTwoAction(@NonNull ImageView imageView){
+    private void playerTwoAction(ImageView imageView){
         imageView.setImageResource(R.drawable.circle);
         if(checkPlayerWin()){
+            playerTwoWin=true;
             WinDialog winDialog = new WinDialog(
                     MainActivity.this,
                     playerTwoName.getText()+" has won the match!",
                     MainActivity.this);
-            winDialog.setCancelable(false);
             winDialog.show();
         }
         else if(totalSelectedBoxes == 9){
@@ -140,7 +130,6 @@ public class MainActivity extends AppCompatActivity {
                     MainActivity.this,
                     "It is a Draw!",
                     MainActivity.this);
-            winDialog.setCancelable(false);
             winDialog.show();
         }
         else{
@@ -169,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
                 boxPositions[combination[1]] == playerTurn &&
                 boxPositions[combination[2]] == playerTurn)
                     response = true;
-
         }
         return response;
     }
@@ -187,16 +175,30 @@ public class MainActivity extends AppCompatActivity {
         boxPositions = new int[]{0,0,0,0,0,0,0,0,0};
         playerTurn=1;
         totalSelectedBoxes=1;
-
-        boardTile1.setImageResource(R.drawable.frog);
-        boardTile2.setImageResource(R.drawable.frog);
-        boardTile3.setImageResource(R.drawable.frog);
-        boardTile4.setImageResource(R.drawable.frog);
-        boardTile5.setImageResource(R.drawable.frog);
-        boardTile6.setImageResource(R.drawable.frog);
-        boardTile7.setImageResource(R.drawable.frog);
-        boardTile8.setImageResource(R.drawable.frog);
-        boardTile9.setImageResource(R.drawable.frog);
+        if(playerOneWin){
+            boardTile1.setImageResource(R.drawable.frog);
+            boardTile2.setImageResource(R.drawable.frog);
+            boardTile3.setImageResource(R.drawable.frog);
+            boardTile4.setImageResource(R.drawable.frog);
+            boardTile5.setImageResource(R.drawable.frog);
+            boardTile6.setImageResource(R.drawable.frog);
+            boardTile7.setImageResource(R.drawable.frog);
+            boardTile8.setImageResource(R.drawable.frog);
+            boardTile9.setImageResource(R.drawable.frog);
+        }
+        else if(playerTwoWin){
+            boardTile1.setImageResource(R.drawable.rabbit);
+            boardTile2.setImageResource(R.drawable.rabbit);
+            boardTile3.setImageResource(R.drawable.rabbit);
+            boardTile4.setImageResource(R.drawable.rabbit);
+            boardTile5.setImageResource(R.drawable.rabbit);
+            boardTile6.setImageResource(R.drawable.rabbit);
+            boardTile7.setImageResource(R.drawable.rabbit);
+            boardTile8.setImageResource(R.drawable.rabbit);
+            boardTile9.setImageResource(R.drawable.rabbit);
+        }
+        playerOneWin=false;
+        playerTwoWin=false;
     }
 
     private final List<int[]> combinationsList = new ArrayList<>();
@@ -214,4 +216,5 @@ public class MainActivity extends AppCompatActivity {
                         boardTile7,
                         boardTile8,
                         boardTile9;
+    private boolean playerOneWin, playerTwoWin;
 }

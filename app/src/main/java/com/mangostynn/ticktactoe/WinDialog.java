@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.widget.AppCompatButton;
 
 public class WinDialog extends Dialog {
 
@@ -21,10 +20,10 @@ public class WinDialog extends Dialog {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.win_dialog_layout);
 
-        dialogMessage = findViewById(R.id.dialogMessage);
+        final TextView dialogMessage = findViewById(R.id.dialogMessage);
         dialogMessage.setText(this.message);
 
-        startAgainBtn = findViewById(R.id.startBtn);
+        final Button startAgainBtn = findViewById(R.id.startAgainBtn);
         startAgainBtn.setOnClickListener(e->{
             mainActivity.restartMatch();
             dismiss();
@@ -32,6 +31,4 @@ public class WinDialog extends Dialog {
     }
     private final String message;
     private final MainActivity mainActivity;
-    private TextView dialogMessage;
-    private Button startAgainBtn;
 }
