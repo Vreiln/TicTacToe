@@ -1,10 +1,8 @@
 package com.mangostynn.ticktactoe;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         playerOneName = findViewById(R.id.playerOneName);
         playerTwoName = findViewById(R.id.playerTwoName);
 
-        playerOneLayout = findViewById(R.id.playerOneLayout);
-        playerTwoLayout = findViewById(R.id.playerTwoLayout);
+        playerOneTurn = findViewById(R.id.playerOneTurn);
+        playerTwoTurn = findViewById(R.id.playerTwoTurn);
 
         boardTile1 = findViewById(R.id.tile1);
         boardTile2 = findViewById(R.id.tile2);
@@ -40,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         combinationsList.add(new int[]{2,4,6});
         combinationsList.add(new int[]{0,4,8});
 
-        getPlayerOneName = getIntent().getStringExtra("playerOne");
-        getPlayerTwoName = getIntent().getStringExtra("playerTwo");
+        String  getPlayerOneName = getIntent().getStringExtra("playerOne"),
+                getPlayerTwoName = getIntent().getStringExtra("playerTwo");
 
         playerOneName.setText(getPlayerOneName);
         playerTwoName.setText(getPlayerTwoName);
@@ -140,13 +138,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void changePlayerTurn(int currentPlayerTurn){
         playerTurn = currentPlayerTurn;
+        String  now="Your Turn!",
+                wait="Wait for your Turn!";
         if(playerTurn == 1){
-            playerOneLayout.setBackgroundResource(R.drawable.round_back_blue_border);
-            playerTwoLayout.setBackgroundResource(R.drawable.round_back_dark_blue);
+            playerOneTurn.setText(now);
+            playerTwoTurn.setText(wait);
         }
         else{
-            playerTwoLayout.setBackgroundResource(R.drawable.round_back_blue_border);
-            playerOneLayout.setBackgroundResource(R.drawable.round_back_dark_blue);
+            playerOneTurn.setText(wait);
+            playerTwoTurn.setText(now);
         }
     }
 
@@ -163,12 +163,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private boolean isBoxSelected(int boxPosition){
-        boolean response = false;
-
-        if(boxPositions[boxPosition] == 0)
-            response = true;
-
-        return response;
+        return boxPositions[boxPosition] == 0;
     }
 
     public void restartMatch(){
@@ -176,26 +171,26 @@ public class MainActivity extends AppCompatActivity {
         playerTurn=1;
         totalSelectedBoxes=1;
         if(playerOneWin){
-            boardTile1.setImageResource(R.drawable.frog);
-            boardTile2.setImageResource(R.drawable.frog);
-            boardTile3.setImageResource(R.drawable.frog);
-            boardTile4.setImageResource(R.drawable.frog);
-            boardTile5.setImageResource(R.drawable.frog);
-            boardTile6.setImageResource(R.drawable.frog);
-            boardTile7.setImageResource(R.drawable.frog);
-            boardTile8.setImageResource(R.drawable.frog);
-            boardTile9.setImageResource(R.drawable.frog);
+            boardTile1.setImageResource(R.drawable.tile_transparent);
+            boardTile2.setImageResource(R.drawable.tile_transparent);
+            boardTile3.setImageResource(R.drawable.tile_transparent);
+            boardTile4.setImageResource(R.drawable.tile_transparent);
+            boardTile5.setImageResource(R.drawable.tile_transparent);
+            boardTile6.setImageResource(R.drawable.tile_transparent);
+            boardTile7.setImageResource(R.drawable.tile_transparent);
+            boardTile8.setImageResource(R.drawable.tile_transparent);
+            boardTile9.setImageResource(R.drawable.tile_transparent);
         }
         else if(playerTwoWin){
-            boardTile1.setImageResource(R.drawable.rabbit);
-            boardTile2.setImageResource(R.drawable.rabbit);
-            boardTile3.setImageResource(R.drawable.rabbit);
-            boardTile4.setImageResource(R.drawable.rabbit);
-            boardTile5.setImageResource(R.drawable.rabbit);
-            boardTile6.setImageResource(R.drawable.rabbit);
-            boardTile7.setImageResource(R.drawable.rabbit);
-            boardTile8.setImageResource(R.drawable.rabbit);
-            boardTile9.setImageResource(R.drawable.rabbit);
+            boardTile1.setImageResource(R.drawable.tile_transparent);
+            boardTile2.setImageResource(R.drawable.tile_transparent);
+            boardTile3.setImageResource(R.drawable.tile_transparent);
+            boardTile4.setImageResource(R.drawable.tile_transparent);
+            boardTile5.setImageResource(R.drawable.tile_transparent);
+            boardTile6.setImageResource(R.drawable.tile_transparent);
+            boardTile7.setImageResource(R.drawable.tile_transparent);
+            boardTile8.setImageResource(R.drawable.tile_transparent);
+            boardTile9.setImageResource(R.drawable.tile_transparent);
         }
         playerOneWin=false;
         playerTwoWin=false;
@@ -204,9 +199,7 @@ public class MainActivity extends AppCompatActivity {
     private final List<int[]> combinationsList = new ArrayList<>();
     private int[] boxPositions = new int[]{0,0,0,0,0,0,0,0,0};
     private int playerTurn = 1, totalSelectedBoxes = 1;
-    private String getPlayerOneName, getPlayerTwoName;
-    private LinearLayout playerOneLayout, playerTwoLayout;
-    private TextView playerOneName, playerTwoName;
+    private TextView playerOneName, playerTwoName, playerOneTurn, playerTwoTurn;
     private ImageView   boardTile1,
                         boardTile2,
                         boardTile3,

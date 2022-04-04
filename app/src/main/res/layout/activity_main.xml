@@ -6,7 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@color/black">
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:rotation="180"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:id="@+id/playerOneLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/ui_dialogue"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="-15dp"
+                android:layout_marginStart="-15dp"
+                android:src="@drawable/rabbit"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginEnd="25dp">
+                <TextView
+                    android:id="@+id/playerTwoName"
+                    android:layout_marginTop="35dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Vreilndddddddd"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:textColor="#004D40"/>
+                <TextView
+                    android:id="@+id/playerOneTurn"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="Your Turn"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:textColor="#004D40"/>
+            </LinearLayout>
 
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,8 +64,8 @@
 
         <LinearLayout
             android:id="@+id/container"
-            android:layout_width="400"
-            android:layout_height="400"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/board_no_tiles"
@@ -146,55 +195,6 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/topBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:rotation="180"
-        android:layout_alignParentTop="true">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@drawable/ui_dialogue"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_marginBottom="-15dp"
-                android:layout_marginStart="-15dp"
-                android:src="@drawable/rabbit"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginEnd="25dp">
-                <TextView
-                    android:layout_marginTop="35dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:text="Vreilndddddddd"
-                    android:textStyle="bold"
-                    android:textSize="30dp"
-                    android:textColor="#004D40"/>
-                <TextView
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:text="Your Turn"
-                    android:textStyle="bold"
-                    android:textSize="25dp"
-                    android:textColor="#004D40"/>
-            </LinearLayout>
-
-        </LinearLayout>
-    </LinearLayout>
-
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
@@ -203,6 +203,7 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
         <LinearLayout
+            android:id="@+id/playerTwoLayout"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@drawable/ui_dialogue"
@@ -220,6 +221,7 @@
                 android:orientation="vertical"
                 android:layout_marginEnd="25dp">
                 <TextView
+                    android:id="@+id/playerOneName"
                     android:layout_marginTop="35dp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
@@ -229,6 +231,7 @@
                     android:textSize="30dp"
                     android:textColor="#004D40"/>
                 <TextView
+                    android:id="@+id/playerTwoTurn"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
