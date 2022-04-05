@@ -5,14 +5,17 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.net.wifi.hotspot2.pps.Credential;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class AddPlayers extends AppCompatActivity {
-
+    private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,7 @@ public class AddPlayers extends AppCompatActivity {
         final EditText  playerOne = findViewById(R.id.player1Name),
                         playerTwo = findViewById(R.id.player2Name);
         final AppCompatButton startBtn = findViewById(R.id.startBtn);
+        final AppCompatButton creditBtn = findViewById(R.id.creditBtn);
 
         startBtn.setOnClickListener(v -> {
             final String
@@ -40,5 +44,17 @@ public class AddPlayers extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        creditBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AddPlayers.this.openCredits();
+            }
+        });
     }
+    public void openCredits(){
+        Intent intent = new Intent(this, credits.class);
+        startActivity(intent);
+    }
+
 }

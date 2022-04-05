@@ -2,16 +2,20 @@ package com.mangostynn.ticktactoe;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
 
 public class WinDialog extends Dialog {
+    private Button button;
 
     public WinDialog(@NonNull Context context,String message,MainActivity mainActivity) {
         super(context);

@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android Studio Project/TicTacToe-main/app/src/main/res/layout/activity_add_players.xml" value="0.264" />
+        <entry key="..\:/Android Studio Project/TicTacToe-main/app/src/main/res/layout/activity_credits.xml" value="0.264" />
         <entry key="..\:/Android Studio Project/TicTacToe-main/app/src/main/res/layout/activity_main.xml" value="0.31353919239904987" />
-        <entry key="..\:/Android Studio Project/TicTacToe-main/app/src/main/res/layout/win_dialog_layout.xml" value="0.264" />
+        <entry key="..\:/Android Studio Project/TicTacToe-main/app/src/main/res/layout/win_dialog_layout.xml" value="0.536" />
         <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.143" />
         <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/background.xml" value="0.21614583333333334" />
         <entry key="..\:/Workspace-C/Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.174" />
